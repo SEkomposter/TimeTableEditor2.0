@@ -1,6 +1,7 @@
 package by.alt.timetableeditor2.controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,18 +18,13 @@ public class MainframeCtrl {
 
     public void showEditDialog(ActionEvent actionEvent) throws IOException {
         owner =((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent edit = FXMLLoader.load(getClass().getResource("./fxml/edittableform.fxml"));
         Stage stage = new Stage();
+        Parent edit = FXMLLoader.load(getClass().getResource("../fxml/edittableform.fxml"));
         stage.setScene(new Scene(edit, 400, 250));
         stage.initModality(Modality.WINDOW_MODAL);
         stage.initOwner(owner);
-        Button source = (Button) actionEvent.getSource();
-        String fxId = source.getId();
-        switch (fxId){
-        }
-        stage.setTitle("Редактор расписаний");
-        stage.setMinHeight(500);
-        stage.setMinWidth(700);
+        stage.setResizable(false);
+        stage.setTitle("Новое расписание");
         stage.show();
     }
 }
