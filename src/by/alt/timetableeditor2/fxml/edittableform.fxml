@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.alt.timetableeditor2.controllers.EditCtrl">
+   <children>
+      <AnchorPane VBox.vgrow="NEVER">
+         <children>
+            <GridPane prefHeight="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="70.0" prefWidth="175.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="215.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField GridPane.columnIndex="1" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Режим" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Название">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Время начала" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Время окончания" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                     <children>
+                        <FlowPane prefHeight="200.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                                 <FlowPane.margin>
+                                    <Insets right="2.0" />
+                                 </FlowPane.margin>
+                              </ChoiceBox>
+                              <Label text="час.">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                                 <FlowPane.margin>
+                                    <Insets right="2.0" />
+                                 </FlowPane.margin>
+                              </ChoiceBox>
+                              <Label text="мин." />
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <FlowPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                                 <FlowPane.margin>
+                                    <Insets right="2.0" />
+                                 </FlowPane.margin>
+                              </ChoiceBox>
+                              <Label text="час.">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                                 <FlowPane.margin>
+                                    <Insets right="2.0" />
+                                 </FlowPane.margin>
+                              </ChoiceBox>
+                              <Label text="мин." />
+                           </children>
+                        </FlowPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane VBox.vgrow="NEVER">
+         <children>
+            <FlowPane alignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Добавить">
+                     <FlowPane.margin>
+                        <Insets right="30.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Отмена">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>

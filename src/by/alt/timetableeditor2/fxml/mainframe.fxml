@@ -11,12 +11,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-
-<VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.alt.timetableeditor2.controllers.MainframeCtrl">
    <children>
     <AnchorPane maxHeight="23.0" minHeight="23.0" prefHeight="23.0" VBox.vgrow="NEVER">
          <children>
-            <MenuBar prefHeight="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <MenuBar prefHeight="23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <menus>
                 <Menu mnemonicParsing="false" text="Файл">
                   <items>
@@ -26,6 +25,22 @@
                         <MenuItem mnemonicParsing="false" text="Закрыть" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Настройки">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Оформление">
+                          <items>
+                              <RadioMenuItem mnemonicParsing="false" selected="true" text="Тема1" />
+                              <RadioMenuItem mnemonicParsing="false" text="Тема2" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Язык">
+                          <items>
+                              <RadioMenuItem mnemonicParsing="false" selected="true" text="Русский" />
+                              <RadioMenuItem mnemonicParsing="false" text="Английский" />
+                          </items>
+                        </Menu>
+                     </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </children>
@@ -36,19 +51,56 @@
               <tabs>
                 <Tab text="Расписания">
                   <content>
-                    <AnchorPane prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane>
                            <children>
-                              <TableView layoutX="40.0" layoutY="34.0" prefHeight="328.0" prefWidth="598.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
-                                <columns>
-                                  <TableColumn minWidth="100.0" prefWidth="140.0" text="Имя" />
-                                  <TableColumn minWidth="100.0" prefWidth="140.0" text="Режим" />
-                                    <TableColumn minWidth="100.0" prefWidth="140.0" text="Время начала" />
-                                    <TableColumn editable="false" minWidth="100.0" prefWidth="140.0" text="Время окончания" />
-                                </columns>
-                                 <columnResizePolicy>
-                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                                 </columnResizePolicy>
-                              </TableView>
+                              <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="40.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <FlowPane alignment="CENTER" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="NEVER">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Button fx:id="addTableButton" defaultButton="true" mnemonicParsing="false" onAction="#showEditDialog" prefWidth="98.0" text="Добавить">
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Button>
+                                                <Button fx:id="editTableButton" disable="true" mnemonicParsing="false" onAction="#showEditDialog" text="Редактировать">
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Button>
+                                                <Button disable="true" mnemonicParsing="false" prefWidth="98.0" text="Удалить">
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </Button>
+                                             </children>
+                                          </FlowPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                <AnchorPane VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TableView layoutX="40.0" layoutY="34.0" prefHeight="328.0" prefWidth="598.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                            <columns>
+                                              <TableColumn minWidth="100.0" prefWidth="140.0" text="Имя" />
+                                              <TableColumn minWidth="100.0" prefWidth="140.0" text="Режим" />
+                                                <TableColumn minWidth="100.0" prefWidth="140.0" text="Время начала" />
+                                                <TableColumn editable="false" minWidth="100.0" prefWidth="140.0" text="Время окончания" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                   </content>
