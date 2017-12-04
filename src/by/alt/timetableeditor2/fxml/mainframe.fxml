@@ -19,10 +19,10 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Файл">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Новый" />
-                        <MenuItem mnemonicParsing="false" text="Открыть" />
-                    <MenuItem mnemonicParsing="false" text="Сохранить" />
-                        <MenuItem mnemonicParsing="false" text="Закрыть" />
+                        <MenuItem mnemonicParsing="false" onAction="#newMenuAction" text="Новый" />
+                        <MenuItem mnemonicParsing="false" onAction="#openMenuAction" text="Открыть" />
+                    <MenuItem mnemonicParsing="false" onAction="#saveMenuAction" text="Сохранить" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeMenuAction" text="Закрыть" />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Настройки">
@@ -86,12 +86,12 @@
                                     </AnchorPane>
                                 <AnchorPane VBox.vgrow="ALWAYS">
                                        <children>
-                                          <TableView layoutX="40.0" layoutY="34.0" prefHeight="328.0" prefWidth="598.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                          <TableView fx:id="table" layoutX="40.0" layoutY="34.0" prefHeight="328.0" prefWidth="598.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                             <columns>
-                                              <TableColumn minWidth="100.0" prefWidth="140.0" text="Имя" />
-                                              <TableColumn minWidth="100.0" prefWidth="140.0" text="Режим" />
-                                                <TableColumn minWidth="100.0" prefWidth="140.0" text="Время начала" />
-                                                <TableColumn editable="false" minWidth="100.0" prefWidth="140.0" text="Время окончания" />
+                                              <TableColumn fx:id="tableName" minWidth="100.0" prefWidth="140.0" text="Имя" />
+                                              <TableColumn fx:id="tableShedule" minWidth="100.0" prefWidth="140.0" text="Режим" />
+                                                <TableColumn fx:id="tableTimeFrom" minWidth="100.0" prefWidth="140.0" text="Время начала" />
+                                                <TableColumn fx:id="tableTimeTo" editable="false" minWidth="100.0" prefWidth="140.0" text="Время окончания" />
                                             </columns>
                                              <columnResizePolicy>
                                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

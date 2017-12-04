@@ -23,7 +23,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField GridPane.columnIndex="1" GridPane.vgrow="NEVER">
+                  <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.vgrow="NEVER">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </GridPane.margin>
@@ -48,7 +48,7 @@
                         <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                  <ComboBox fx:id="sheduleCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
                      <GridPane.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </GridPane.margin>
@@ -57,7 +57,7 @@
                      <children>
                         <FlowPane prefHeight="200.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                              <ChoiceBox fx:id="timeFromHr" minWidth="30.0" prefHeight="25.0">
                                  <FlowPane.margin>
                                     <Insets right="2.0" />
                                  </FlowPane.margin>
@@ -67,7 +67,7 @@
                                     <Insets right="10.0" />
                                  </FlowPane.margin>
                               </Label>
-                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                              <ChoiceBox fx:id="timeFromMin" minWidth="30.0" prefHeight="25.0">
                                  <FlowPane.margin>
                                     <Insets right="2.0" />
                                  </FlowPane.margin>
@@ -84,7 +84,7 @@
                      <children>
                         <FlowPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                              <ChoiceBox fx:id="timeToHr" minWidth="30.0" prefHeight="25.0">
                                  <FlowPane.margin>
                                     <Insets right="2.0" />
                                  </FlowPane.margin>
@@ -94,7 +94,7 @@
                                     <Insets right="10.0" />
                                  </FlowPane.margin>
                               </Label>
-                              <ChoiceBox minWidth="30.0" prefHeight="25.0">
+                              <ChoiceBox fx:id="timeToMin" minWidth="30.0" prefHeight="25.0">
                                  <FlowPane.margin>
                                     <Insets right="2.0" />
                                  </FlowPane.margin>
@@ -118,12 +118,12 @@
          <children>
             <FlowPane alignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <Button fx:id="OKButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="OK">
+                  <Button fx:id="OKButton" mnemonicParsing="false" onAction="#okButtonPressed" prefHeight="30.0" prefWidth="75.0" text="OK">
                      <FlowPane.margin>
                         <Insets right="30.0" />
                      </FlowPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Отмена">
+                  <Button mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="30.0" prefWidth="75.0" text="Отмена">
                      <FlowPane.margin>
                         <Insets left="30.0" />
                      </FlowPane.margin>
