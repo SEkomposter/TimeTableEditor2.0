@@ -4,9 +4,49 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources/mysql-connector-java-5.1.0-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources/log4j-core-2.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources/log4j-1.2-api-2.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/src/by/alt/timetableeditor2/Resources" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
-
